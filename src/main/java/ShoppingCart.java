@@ -5,10 +5,19 @@ public class ShoppingCart {
     ArrayList<Item> items = new ArrayList<>();
     int counter = 0;
     double total = 0;
+    double shipping = 0.00F;
+    static double SALESTAX = 0.1;
     NumberFormat nf = NumberFormat.getCurrencyInstance();
+
 
     public ShoppingCart() {
     }
+
+    public ShoppingCart(double shipping) {
+        this.shipping = shipping;
+    }
+
+
 
     public void addItem(Item item) {
         items.add(item);
@@ -18,6 +27,7 @@ public class ShoppingCart {
         for(Item i : items){
             total += i.price * i.quantity;
         }
+        total += total * SALESTAX;
     }
 
     public String getTotal() {
