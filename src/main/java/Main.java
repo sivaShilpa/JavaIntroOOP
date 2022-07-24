@@ -2,7 +2,8 @@ public class Main {
     public static void main(String[] args) {
         //ex1();
         //ex3();
-        ex4();
+        //ex4();
+        ex5();
     }
 
     static void ex1(){
@@ -43,16 +44,14 @@ public class Main {
         System.out.println(result4);
         System.out.println(calculator.getHistory());
     }
+
+    static void ex5(){
+        var shoppingCart = new ShoppingCart();
+        shoppingCart.addItem(new Item(2.00F, 4, "Socks"));
+        shoppingCart.addItem(new Item(10.00F, 2, "Shirts"));
+        shoppingCart.calculateTotal();
+        System.out.println(shoppingCart.getTotal());
+    }
 }
-/**
- * 3
- * 2
- * 2
- * 4
- * 1 + 2 = 3
- * 4 - 2 = 2
- * 10 / 5 = 2
- * 2 * 2 = 4
- */
 
 
