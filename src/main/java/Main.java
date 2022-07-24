@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        ex1();
+        //ex1();
+        ex3();
     }
 
     static void ex1(){
@@ -17,6 +18,15 @@ public class Main {
         System.out.println(p3);
 
         System.out.println("Person count: " + Person.getPersonCount());
+    }
+
+    static void ex3(){
+        var n1 = new AwesomeNumber(4);
+        var n2 = new AwesomeNumber(2);
+        var result1 = AwesomeNumber.add(n1, n2);
+        var result2 = AwesomeNumber.subtract(n1, n2);
+        System.out.println(result1);
+        System.out.println(result2);
     }
 }
 
