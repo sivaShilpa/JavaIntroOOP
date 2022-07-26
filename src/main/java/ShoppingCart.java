@@ -33,4 +33,22 @@ public class ShoppingCart {
     public String getTotal() {
         return nf.format(total);
     }
+
+    public String shipOrder(String name, String strAdd, String city, String state, int zipCode){
+        var invoice = "Ship to: \n\t" + name + "\n\t" + strAdd + "\n\t" + city + ", " + state + " " + zipCode +
+                "\n\nItems\n-----\n";
+
+        for(Item i : items){
+           invoice += i.description + " " + nf.format(i.price) + " " + "\t(" + i.quantity + ")\t" + nf.format(i.price*i.quantity) + "\n";
+        }
+        invoice += "\n" + "Shipping: ";
+        if(total <= 10.00){
+            invoice += nf.format(5.00);
+        }
+        else{
+            invoice += "Free\n";
+        }
+        invoice += "\nTotal Cost\n---------\n" + nf.format(total);
+        return invoice;
+    }
 }

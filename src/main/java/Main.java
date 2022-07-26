@@ -1,9 +1,13 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
-        //ex1();
-        //ex3();
-        //ex4();
-        ex5();
+//        ex1();
+//        ex3();
+//        ex4();
+//        ex5();
+        ex6();
+
     }
 
     static void ex1(){
@@ -50,7 +54,17 @@ public class Main {
         shoppingCart.addItem(new Item(2.00F, 4, "Socks"));
         shoppingCart.addItem(new Item(10.00F, 2, "Shirts"));
         shoppingCart.calculateTotal();
-        System.out.println(shoppingCart.getTotal());
+        var invoice = shoppingCart.shipOrder("Jon Smith", "123 Green Street", "Austin", "TX", 78737);
+        System.out.println(invoice);
+    }
+
+    static void ex6(){
+        var shapes = new ArrayList<Shape>();
+        shapes.add(new Square(3));
+        shapes.add(new Rectangle(10,3));
+        for (Shape s : shapes) {
+            System.out.println(s.draw());
+        }
     }
 }
 
