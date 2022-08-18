@@ -1,3 +1,2 @@
 # JavaIntroOOP
-Solutions to introduction Exercises to Java.
-https://github.com/CtlAltDefeat2/intro-oop
+Solutions to introduction Exercises to Java. https://github.com/CtlAltDefeat2/intro-oop/blob/dev/assignments.md
